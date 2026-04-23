@@ -1,0 +1,19 @@
+{
+  "name": "smart-parking-system",
+  "version": "1.0.0",
+  "description": "Production-ready Smart Parking System with Real-time Sync",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "cd server && npm run start",
+    "client": "cd client && npm run dev",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm install && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "SmartPark",
+  "license": "ISC"
+}
