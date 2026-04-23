@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: smart-parking-system
+    env: node
+    plan: free
+    buildCommand: npm run install-all && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: VITE_MAPBOX_TOKEN
+        sync: false

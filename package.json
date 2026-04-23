@@ -5,6 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd server && npm run start",
     "client": "cd client && npm run dev",
     "install-all": "npm install && cd server && npm install && cd ../client && npm install",
@@ -15,5 +16,8 @@
     "node": ">=18.0.0"
   },
   "author": "SmartPark",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
 }

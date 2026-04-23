@@ -8,7 +8,7 @@ const rateLimit = require('express-rate-limit');
 const { Server } = require('socket.io');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 const path = require('path');
-require('dotenv').config();
+require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
 const authRoutes = require('./routes/auth');
 const parkingLotRoutes = require('./routes/parkingLots');
